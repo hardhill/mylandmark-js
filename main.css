@@ -1,0 +1,58 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+}
+
+.mainpage {
+    background-color: #333D40;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+header {
+    margin-top: 0px;
+    margin-left: auto;
+    background-color: #476062;
+
+}
+
+#main {
+    background-color: #FFF;
+    margin: 50px auto;
+    height: 400px;
+    width: 1024px;
+}
+
+.pagetitle {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 18pt;
+    text-transform: uppercase;
+}
+
+#control {
+    background-color: #cacaca;
+    text-align: right;
+}
+
+#forma {
+    padding: 5px;
+
+}
+
+.labels {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: small;
+    font-family: Cambria;
+}
+
