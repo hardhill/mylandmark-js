@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="main.css"/>
 
-    <style>
-
-    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
     <script>
 
         var map;
         var markers = [];
+        console.log('loading: ' + document.readyState);
+$(document).ready(function () {
+   $(close());
 
+})
 
         function initMap() {
             var myLatlng = {lat: 51.871491, lng: 107.731951};
@@ -59,8 +69,8 @@
 
         function placeMarkerAndFields(latLng, map) {
             var lnmarker = markers.length;
-            if (lnmarker>0){
-                var lastmrk = markers[lnmarker-1]
+            if (lnmarker > 0) {
+                var lastmrk = markers[lnmarker - 1]
                 var ll = lastmrk.getPosition();
                 var txt1 = document.getElementById('txtlongi');
                 var txt2 = document.getElementById('txtlati');
@@ -70,7 +80,13 @@
         }
 
         function addData() {
-
+            var d = document.getElementById('txtdescription').value;
+            var lng = document.getElementById('txtlongi').value;
+            var lat = document.getElementById('txtlati').value;
+            var frm = document.getElementById('frmData');
+            frm.action = 'indexa.html';
+            frm.method = 'GET';
+            frm.submit();
         }
 
     </script>
@@ -86,49 +102,40 @@
 
 </header>
 <div class="container">
-    <div class="d-block">
-        <div id="datablock">
+    <div class="card p-2">
+        <form id="frmData">
+            <div class="form-group">
+                <label for="txtdescription">Description</label>
+                <input type="text" class="form-control" id="txtdescription" aria-describedby="descrHelp"
+                       placeholder="Input description" maxlength="200" name="txtdescr">
+                <small id="descrHelp" class="form-text text-muted">Input landmark description.</small>
+            </div>
+            <div class="form-group">
+                <label for="txtlongi">Longitude</label>
+                <input type="text" class="form-control" id="txtlongi" aria-describedby="longiHelp" name="txtlng">
+                <small id="longiHelp" class="form-text text-muted">the value of this field is determined by the position
+                    marker on the map
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="txtlati">Latitude</label>
+                <input type="number" class="form-control" id="txtlati" aria-describedby="latiHelp" name="txtlat">
+                <small id="latiHelp" class="form-text text-muted">the value of this field is determined by the position
+                    marker on the map
+                </small>
+            </div>
 
-        </div>
+            <button id="btnAddPosition" class="btn btn-primary">Add position</button>
+            <!--onclick="addData()"-->
+        </form>
     </div>
+
 </div>
-<form id="frmData">
-    <div class="form-group">
-        <label for="txtdescription">Description</label>
-        <input type="text" class="form-control" id="txtdescription" aria-describedby="descrHelp" placeholder="Input description">
-        <small id="descrHelp" class="form-text text-muted">Input landmark description.</small>
-    </div>
-    <div class="form-group">
-        <label for="txtlongi">Longitude</label>
-        <input type="text" class="form-control" id="txtlongi" aria-describedby="longiHelp">
-        <small id="longiHelp" class="form-text text-muted">the value of this field is determined by the position marker on the map</small>
-    </div>
-    <div class="form-group">
-        <label for="txtlati">Latitude</label>
-        <input type="text" class="form-control" id="txtlati" aria-describedby="latiHelp">
-        <small id="latiHelp" class="form-text text-muted">the value of this field is determined by the position marker on the map</small>
-    </div>
-
-    <button id="btnAddPosition" onclick="addData()" class="btn btn-primary">Add position</button>
-</form>
-
-
-
-
-
 
 
 <div id="map"></div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI-xDAIte2eH2mehinBidaFHm3WhUkHAk&callback=initMap"
         async defer></script>
 </body>
