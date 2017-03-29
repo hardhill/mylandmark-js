@@ -92,13 +92,32 @@
         </div>
     </div>
 </div>
-<form class="form-group" id="frmData">
-    <label>Longitude:</label>
-    <input type="text" id="txtlongi" name="txtlon">
-    <label>Latitude:</label>
-    <input type="text" id="txtlati" name="txtlat">
-    <button id="btn1" onclick="addData()">Add</button>
+<form id="frmData">
+    <div class="form-group">
+        <label for="txtdescription">Description</label>
+        <input type="text" class="form-control" id="txtdescription" aria-describedby="descrHelp" placeholder="Input description">
+        <small id="descrHelp" class="form-text text-muted">Input landmark description.</small>
+    </div>
+    <div class="form-group">
+        <label for="txtlongi">Longitude</label>
+        <input type="text" class="form-control" id="txtlongi" aria-describedby="longiHelp">
+        <small id="longiHelp" class="form-text text-muted">the value of this field is determined by the position marker on the map</small>
+    </div>
+    <div class="form-group">
+        <label for="txtlati">Latitude</label>
+        <input type="text" class="form-control" id="txtlati" aria-describedby="latiHelp">
+        <small id="latiHelp" class="form-text text-muted">the value of this field is determined by the position marker on the map</small>
+    </div>
+
+    <button id="btnAddPosition" onclick="addData()" class="btn btn-primary">Add position</button>
 </form>
+
+
+
+
+
+
+
 <div id="map"></div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
