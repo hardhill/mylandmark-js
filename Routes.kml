@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Routes.kml</name>
+	<StyleMap id="msn_red-square">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_red-square</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_red-square</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_grn-stars">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/grn-stars.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/grn-stars-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_grn-stars">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/grn-stars.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/grn-stars-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sn_red-square">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-square.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-square-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_grn-stars">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grn-stars</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grn-stars</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_red-square">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-square.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-square-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Routes</name>
+		<open>1</open>
+		<Placemark>
+			<name>finish</name>
+			<LookAt>
+				<longitude>107.746731188349</longitude>
+				<latitude>51.92583172576332</latitude>
+				<altitude>0</altitude>
+				<heading>0.5028919456743247</heading>
+				<tilt>13.1195460996399</tilt>
+				<range>2351.506172696837</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_red-square</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>107.7501779435363,51.92348313263857,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>First track</name>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					107.7553950451285,51.88847937481516,0 107.7570014267718,51.88956868424108,0 107.758078544819,51.89068897260128,0 107.7585108459594,51.89201646031166,0 107.7595538589924,51.89369070362417,0 107.7599637636891,51.89431752946312,0 107.7606716627365,51.89510312192566,0 107.7611205590795,51.89573160605455,0 107.7602357843329,51.89762977433607,0 107.7600311401264,51.8983505669938,0 107.7597388998274,51.89904157788089,0 107.7589725283648,51.89988756198328,0 107.758563493574,51.90049132212555,0 107.7581613293292,51.9016707892705,0 107.7578199899468,51.90252967877222,0 107.7575700235847,51.90299910516514,0 107.7569292182808,51.90359466740836,0 107.7561496492467,51.90426744278866,0 107.7552826727238,51.90465401001368,0 107.7548749919877,51.90571024337699,0 107.7549350727607,51.90733356980447,0 107.7551396850837,51.90805823440207,0 107.7544526277603,51.90946066446099,0 107.7535938456766,51.91087649707546,0 107.7523960884898,51.91247026516498,0 107.7516031850264,51.91350708888042,0 107.7506469638986,51.91437908810698,0 107.7488611375704,51.91590449789175,0 107.7474628033563,51.91702181071316,0 107.7475221715738,51.91792084449004,0 107.7475376934562,51.91835599091181,0 107.7468272597017,51.9192440085908,0 107.7467691366637,51.92042820242656,0 107.7467264402011,51.92104795760142,0 107.7464384089037,51.92138690806566,0 107.7473912414153,51.92209829080448,0 107.7486234376759,51.92268195371848,0 107.7502787783892,51.92352797337183,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>start</name>
+			<LookAt>
+				<longitude>107.7532445816782</longitude>
+				<latitude>51.89261959607396</latitude>
+				<altitude>0</altitude>
+				<heading>0.5080181648713645</heading>
+				<tilt>13.12050139578908</tilt>
+				<range>2351.506172697079</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_grn-stars</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>107.7553835592822,51.88845184118708,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
