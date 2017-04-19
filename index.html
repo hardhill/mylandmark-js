@@ -21,10 +21,10 @@
         var map;
         var markers = [];
         console.log('loading: ' + document.readyState);
-$(document).ready(function () {
-   $(close());
+        $(document).ready(function () {
+            initMap();
 
-})
+        })
 
         function initMap() {
             var myLatlng = {lat: 51.871491, lng: 107.731951};
@@ -42,56 +42,18 @@ $(document).ready(function () {
                     ]
                 }
             });
-            map.addListener('click', function (e) {
-                placeMarkerAndPanTo(e.latLng, map);
-                placeMarkerAndFields(e.latLng, map);
-            });
-        }
-        function placeMarkerAndPanTo(latLng, map) {
-            // очистить  все маркеры
-            if (markers.length > 0) {
-                for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(null);
-                }
-                markers = [];
-            }
-            // создать маркер
-            var marker = new google.maps.Marker({
-                position: latLng,
-                map: map
-            });
-            markers.push(marker);
-            window.setTimeout(function () {
-                map.panTo(marker.getPosition());
-            }, 1000);
-
+//            map.addListener('click', function (e) {
+//                placeMarkerAndPanTo(e.latLng, map);
+//                placeMarkerAndFields(e.latLng, map);
+//            });
         }
 
-        function placeMarkerAndFields(latLng, map) {
-            var lnmarker = markers.length;
-            if (lnmarker > 0) {
-                var lastmrk = markers[lnmarker - 1]
-                var ll = lastmrk.getPosition();
-                var txt1 = document.getElementById('txtlongi');
-                var txt2 = document.getElementById('txtlati');
-                txt1.value = ll.lat();
-                txt2.value = ll.lng();
-            }
-        }
 
-        function addData() {
-            var d = document.getElementById('txtdescription').value;
-            var lng = document.getElementById('txtlongi').value;
-            var lat = document.getElementById('txtlati').value;
-            var frm = document.getElementById('frmData');
-            frm.action = 'indexa.html';
-            frm.method = 'GET';
-            frm.submit();
-        }
+
 
     </script>
 </head>
-<body onload="initMap()">
+<body>
 <header>
     <nav class="navbar sticky-top navbar-inverse bg-inverse">
         <a class="navbar-brand" href="#">
